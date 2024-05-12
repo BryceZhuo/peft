@@ -45,6 +45,8 @@ from .tuners import (
     LoKrModel,
     LoraConfig,
     LoraModel,
+    SLoraConfig,
+    SLoraModel,
     MultitaskPromptTuningConfig,
     OFTConfig,
     OFTModel,
@@ -79,6 +81,7 @@ PEFT_TYPE_TO_CONFIG_MAPPING: dict[str, type[PeftConfig]] = {
     "PREFIX_TUNING": PrefixTuningConfig,
     "P_TUNING": PromptEncoderConfig,
     "LORA": LoraConfig,
+    "SLORA": SLoraConfig,
     "LOHA": LoHaConfig,
     "LOKR": LoKrConfig,
     "ADALORA": AdaLoraConfig,
@@ -93,6 +96,7 @@ PEFT_TYPE_TO_CONFIG_MAPPING: dict[str, type[PeftConfig]] = {
 
 PEFT_TYPE_TO_TUNER_MAPPING: dict[str, type[_BaseTuner]] = {
     "LORA": LoraModel,
+    "SLORA": SLoraModel,
     "LOHA": LoHaModel,
     "LOKR": LoKrModel,
     "ADALORA": AdaLoraModel,
