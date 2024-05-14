@@ -32,7 +32,7 @@ from .config import SLoraConfig
 
 class SLoraLayer(BaseTunerLayer):
     # All names of layers that may contain (trainable) adapter weights
-    adapter_layer_names = ("lora_A", "lora_B", "lora_s" "lora_embedding_A", "lora_embedding_B")
+    adapter_layer_names = ("lora_A", "lora_B", "lora_S", "lora_embedding_A", "lora_embedding_B")
     # All names of other parameters that may contain adapter-related parameters
     other_param_names = ("r", "lora_alpha", "scaling", "lora_dropout", "spectral_type")
 
