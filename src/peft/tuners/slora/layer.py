@@ -576,6 +576,7 @@ class Linear(nn.Module, SLoraLayer):
             # cast back the weights
             self.lora_A[adapter].weight.data = weight_A.to(dtype)
             self.lora_B[adapter].weight.data = weight_B.to(dtype)
+            self.lora_S[adapter].data = weight_S.to(dtype).squeeze(-1)
 
         return output_tensor
 
